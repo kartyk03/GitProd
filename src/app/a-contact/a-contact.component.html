@@ -1,0 +1,19 @@
+<div class="p">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label class="email-text">Enter Email</label>
+            <input type="email" formControlName="email" class="email"><br>
+            <small *ngIf="!myForm.get('email').valid && myForm.get('email').untouched">Email is required</small>
+        </div>
+        <div><label class="pass-text">Enter Password</label>
+            <input type="password" formControlName="pass" class="pass"><br>
+        </div>
+        <div>
+            <label class="reatTerms" >Terms and Conditions</label>
+            <input type="checkbox" formControlName="readTerms" class="cbox">
+        </div>
+        <div>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

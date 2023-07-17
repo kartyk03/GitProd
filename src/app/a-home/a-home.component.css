@@ -1,0 +1,12 @@
+.p{
+    height:100vh;
+    background-color: aqua;
+    text-align: center;
+    padding: 40px;
+}
+
+.btn{
+    width:135px;
+    font-size: 20px;
+    margin: 20px;
+}

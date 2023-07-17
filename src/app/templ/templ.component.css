@@ -1,0 +1,19 @@
+.container {
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.btn {
+    width: 100px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+h2{
+    color: brown;
+    font-family:fantasy;
+}
+
+#p1{
+    color: blue;
+}

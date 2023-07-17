@@ -1,0 +1,15 @@
+<div class="container">
+    <div #heading>
+        <h2>Analyze Word</h2>
+        <br>
+        <input type="text" #textInput>
+        <br><br>
+        <button class="btn btn-dark" (click)="analyzeWord(textInput.value)">Results</button>
+        <br>
+        <p id="p1">Number of Characters : {{textInput.value.length}}</p>
+        <br>
+        <p>Vowels</p>
+        <br>
+        <p *ngFor="let vowel of vowels">{{vowel.letter}} : {{vowel.count}}</p>
+    </div>
+</div>

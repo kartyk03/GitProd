@@ -1,0 +1,37 @@
+<div class="second-container">
+    <h1>Second Component</h1><br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <select class="form-control" name="shape" [(ngModel)]="shape">
+                    <option value="">Select Shape</option>
+                    <option value="square">Square</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="circle">Cirlce</option>
+                </select><br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <select name="color" class="form-control" [(ngModel)]="color">
+                    <option value="">Select Color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                </select><br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary" (click)="drawShape()" [disabled]="shape.length===0 || color.length===0">Draw
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="output">
+                <div class="shape{{shapeClass}}"></div>
+            </div>
+        </div>
+    </div>
+</div>

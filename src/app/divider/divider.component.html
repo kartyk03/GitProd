@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <button class="btn btn-success" [ngClass]="{'active-btn':chosenNum===2}" (click)="divi(2)">divisible by
+                    2</button>
+            </div><br>
+            <div>
+                <button class="btn btn-success" [ngClass]="{'active-btn': chosenNum===3}" (click)="divi(3)">divisible by
+                    3</button>
+            </div><br>
+            <div>
+                <button class="btn btn-success" [ngClass]="{'active-btn':chosenNum===5}" (click)="divi(5)">divisible by
+                    5</button>
+            </div><br>
+            <div>
+                <button class="btn btn-success" [ngClass]="{'active-btn':chosenNum===10}" (click)="divi(10)">divisible
+                    by 10</button>
+            </div><br>
+            <div>
+                <button class="btn btn-danger" [disabled]="isClearDisabled" (click)="divi(1)">Clear</button>
+            </div>
+        </div>
+    </div>
+    <div class="numb">
+        <div class="col-md-8">
+            <p *ngFor="let number of numbers" [ngClass]="{
+            highlight: number % chosenNum===0 && chosenNum>1
+        }" [ngStyle]="{'font-size':(number%chosenNum===0 && chosenNum>1)? '30px' : '24px'}">{{number}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mesaage" *ngIf="chosenNum>1">Numbers highlighted above are divisible by {{chosenNum}}
+        </div>
+    </div>
+</div>

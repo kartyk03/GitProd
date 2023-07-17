@@ -1,0 +1,33 @@
+header{
+    padding: 30px;
+    background-color: rgb(200, 176, 176);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a{  
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.active-h{
+    color: aqua;
+}
+
+a.active-p{
+    color: aquamarine;
+}
+
+a.active-a{
+    color:lightgreen;
+}
+
+a.active-c{
+    color: palegoldenrod;
+}
